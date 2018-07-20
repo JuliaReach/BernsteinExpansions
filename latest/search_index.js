@@ -84,7 +84,7 @@ var documenterSearchIndex = {"docs": [
     "location": "lib/implicit_bernstein_form.html#BernsteinExpansions.ImplicitForm",
     "page": "Implicit Bernstein form",
     "title": "BernsteinExpansions.ImplicitForm",
-    "category": "Type",
+    "category": "type",
     "text": "ImplicitForm{T<:Number}\n\nType defining an implicit Bernstein form.\n\nFields\n\narray – the vector of vectors holding the Bernstein coefficients\ndim   – an integer representing the ambient dimension\n\n\n\n"
 },
 
@@ -100,7 +100,7 @@ var documenterSearchIndex = {"docs": [
     "location": "lib/implicit_bernstein_form.html#BernsteinExpansions.univariate",
     "page": "Implicit Bernstein form",
     "title": "BernsteinExpansions.univariate",
-    "category": "Function",
+    "category": "function",
     "text": "univariate(k::Int64, l::Int64, low::N, high::N)::Vector{N} where {N<:AbstractFloat}\n\nCompute the Bernstein coefficients of a univariate monomial.\n\nInput\n\nk    – degree of the given monomial\nl    – degree of the Bernstein polynomial\nlow  – the lower bound of the interval where the Bernstein coefficients are computed\nhigh – the upper bound of the interval the Bernstein coefficients are computed\n\nOutput\n\nA vector with floating point entries containing the Bernstein coefficients.\n\n\n\nunivariate(k::Int64, l::Int64, low::Rational, high::Rational)::Vector{Rational}\n\nCompute exactly the Bernstein coefficients of a univariate monomial.\n\nInput\n\nk    – degree of the given monomial\nl    – degree of the Bernstein polynomial\nlow  – the lower bound of the interval where the Bernstein coefficients are computed\nhigh – the upper bound of the interval the Bernstein coefficients are computed\n\nOutput\n\nA vector with rational entries containing the Bernstein coefficients.\n\n\n\n"
 },
 
@@ -116,7 +116,7 @@ var documenterSearchIndex = {"docs": [
     "location": "lib/implicit_bernstein_form.html#BernsteinExpansions.multivariate",
     "page": "Implicit Bernstein form",
     "title": "BernsteinExpansions.multivariate",
-    "category": "Function",
+    "category": "function",
     "text": "multivariate(k::Vector{Int64}, l::Vector{Int64},\n                      low::Vector{N}, high::Vector{N})::ImplicitForm{N} where {N<:Number}\n\nCompute the Bernstein coefficients of a multivariate monomial.\n\nInput\n\nk    – vector of degrees for each monomial\nl    – vector of degrees of the Bernstein polynomial for each monomial\nlow  – the lower bounds of the interval where the Bernstein coefficients are computed\nhigh – the upper bounds of the interval the Bernstein coefficients are computed\n\nOutput\n\nA Bernstein implicit form holding the Bernstein coefficients.\n\nExamples\n\njulia> m = multivariate([3,2],[3,2],[1.0,2],[2,4.0]);\njulia> m.array\n2-element Array{Array{Float64,1},1}:\n [1.0, 2.0, 4.0, 8.0]\n [4.0, 8.0, 16.0]\n\n\n\n"
 },
 
@@ -148,8 +148,8 @@ var documenterSearchIndex = {"docs": [
     "location": "lib/tensorial_bernstein_form.html#BernsteinExpansions.generate_tensor_form",
     "page": "Tensorial Bernstein form",
     "title": "BernsteinExpansions.generate_tensor_form",
-    "category": "Function",
-    "text": "generate_tensor_form(implicitform::ImplicitForm{T})::Vector{T} where{T<:Number}\n\nCompute the Bernstein expansion in tensorial form given its implicit form.\n\nInput\n\nimplicitform – Bernstein expansion in implicit form\n\nAlgorithm\n\nThis implementation uses Julia's Kronecker product kron function.\n\n\n\n"
+    "category": "function",
+    "text": "generate_tensor_form(implicitform::ImplicitForm{T})::Vector{T} where{T<:Number}\n\nCompute the Bernstein expansion in tensorial form given its implicit form.\n\nInput\n\nimplicitform – Bernstein expansion in implicit form\n\nAlgorithm\n\nThis implementation uses Julia\'s Kronecker product kron function.\n\n\n\n"
 },
 
 {
@@ -164,8 +164,8 @@ var documenterSearchIndex = {"docs": [
     "location": "lib/tensorial_bernstein_form.html#BernsteinExpansions.multivariate_tensor",
     "page": "Tensorial Bernstein form",
     "title": "BernsteinExpansions.multivariate_tensor",
-    "category": "Function",
-    "text": "multivariate_tensor(k::Vector{Int64}, l::Vector{Int64},\n                      low::Vector{T}, high::Vector{T})::Vector{T} where {T<:Number}\n\nCompute the Bernstein coefficients of a multivariate monomial in the tensor form.\n\nInput\n\nk    – vector of degrees for each monomial\nl    – vector of degrees of the Bernstein polynomial for each monomial\nlow  – the lower bounds of the interval where the Bernstein coefficients are computed\nhigh – the upper bounds of the interval the Bernstein coefficients are computed\n\nAlgorithm\n\nThis implementation uses Julia's Kronecker product kron function.\n\n\n\n"
+    "category": "function",
+    "text": "multivariate_tensor(k::Vector{Int64}, l::Vector{Int64},\n                      low::Vector{T}, high::Vector{T})::Vector{T} where {T<:Number}\n\nCompute the Bernstein coefficients of a multivariate monomial in the tensor form.\n\nInput\n\nk    – vector of degrees for each monomial\nl    – vector of degrees of the Bernstein polynomial for each monomial\nlow  – the lower bounds of the interval where the Bernstein coefficients are computed\nhigh – the upper bounds of the interval the Bernstein coefficients are computed\n\nAlgorithm\n\nThis implementation uses Julia\'s Kronecker product kron function.\n\n\n\n"
 },
 
 {
@@ -229,7 +229,7 @@ var documenterSearchIndex = {"docs": [
     "page": "About",
     "title": "Running the benchmarks",
     "category": "section",
-    "text": "This package contains a suite of benchmarks that is handled through PkgBenchmark. To run the benchmarks, execute the following commands in Julia's REPL:julia> using BernsteinExpansions, PkgBenchmark\njulia> benchmarkpkg(\"BernsteinExpansions\")To save the results to a custom directory, use:julia> benchmarkpkg(\"BernsteinExpansions\", resultsdir=\"/Users/forets/Projects\")For further options see the inline help of benchmarkpkg."
+    "text": "This package contains a suite of benchmarks that is handled through PkgBenchmark. To run the benchmarks, execute the following commands in Julia\'s REPL:julia> using BernsteinExpansions, PkgBenchmark\njulia> benchmarkpkg(\"BernsteinExpansions\")To save the results to a custom directory, use:julia> benchmarkpkg(\"BernsteinExpansions\", resultsdir=\"/Users/forets/Projects\")For further options see the inline help of benchmarkpkg."
 },
 
 {
