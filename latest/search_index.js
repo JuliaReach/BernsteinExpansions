@@ -21,7 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Manual Outline",
     "category": "section",
-    "text": "Pages = [\n    \"man/bernstein_expansion.md\"\n]\nDepth = 2"
+    "text": "Pages = [\n    \"man/bernstein_expansion.md\",\n    \"man/benchmarks.md\"\n]\nDepth = 2"
 },
 
 {
@@ -62,6 +62,30 @@ var documenterSearchIndex = {"docs": [
     "title": "References",
     "category": "section",
     "text": "[1] Smith, Andrew Paul. Fast construction of constant bound functions for sparse polynomials. Journal of Global Optimization 43.2 (2009): 445-458."
+},
+
+{
+    "location": "man/benchmarks.html#",
+    "page": "Benchmarks",
+    "title": "Benchmarks",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "man/benchmarks.html#Benchmarks-1",
+    "page": "Benchmarks",
+    "title": "Benchmarks",
+    "category": "section",
+    "text": "Pages = [\"benchmarks.md\"]\nDepth = 3"
+},
+
+{
+    "location": "man/benchmarks.html#Running-the-benchmarks-1",
+    "page": "Benchmarks",
+    "title": "Running the benchmarks",
+    "category": "section",
+    "text": "The benchmark/benchmarks.jl file defines a benchmark suite that can be evaluated with the tools provided by PkgBenchmark and BenchmarkTools.To run the benchmarks, execute:julia> using PkgBenchmark\njulia> results = benchmarkpkg(\"LazySets\")To compare current version to another tagged version, commit or branch:julia> results = judge(\"LazySets\", <tagged-version-or-branch>)To export the benchmark results to a Markdown file:julia> export_markdown(\"results.md\", results)To export the benchmark results to a JSON file:julia> writeresults(\"results.json\", results)"
 },
 
 {
